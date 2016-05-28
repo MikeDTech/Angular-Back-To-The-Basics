@@ -1,0 +1,29 @@
+<div>
+<hr>
+
+
+<!---Describes Template---------------------------------------------------------- -->
+
+	<h2>Main</h2>
+	<h3>The Layout for the Search Form for a GitHub Username</h3>
+	<p><strong>Contains:</strong> <br>
+
+		templateUrl: 'templates/main.html', <br>
+		--> Contains HTML for form and Can View Search Results<br><br>
+
+		controller: 'MainCtrl' <br>
+		--> Presents the search, controls the $location (changes the url to #/user/someuser)
+		<br> and it controls the countdown / autosearch feature<br><br>
+	<p>-----------------------------------------------------</p>
+
+<!------------------------------------------------------------------------------- -->
+
+	<h1>{{ countdown }}</h1>
+
+	<form name="searchUser" ng-submit="search(username)">
+		<input type="search" required="" ng-model="username" />
+		<input type="submit" value="Search" />
+		<hr>
+	</form>
+
+</div>

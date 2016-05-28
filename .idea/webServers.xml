@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="05c45fca-0dc5-4d1e-a75b-74ccd8d8823f" name="Project" url="http://localhost:63342">
+        <fileTransfer port="0" mountedRoot="C:\Users\ToshibaPC\Google Drive\WS\Angular\angular-pluralsight\Angular Introduction" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

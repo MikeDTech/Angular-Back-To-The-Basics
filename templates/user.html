@@ -1,0 +1,58 @@
+<div>
+	<hr>
+
+
+	<!---Describes Template---------------------------------------------------------- -->
+
+	<h2>User</h2>
+	<h3>The Search Form for a GitHub Username</h3>
+	<p><strong>Contains:</strong> <br>
+
+		templateUrl: 'templates/user.html', <br>
+		--> Contains HTML Sort Order and Table for Results of Search<br><br>
+
+		controller: 'UserCtrl' <br>
+		--> Calls the "githubHttpCall" (module that has the function for the $http service) and Handles the data from the search results<br><br>
+	<p>-----------------------------------------------------</p> <br>
+
+	<!------------------------------------------------------------------------------- -->
+	<h2>{{ user.name }}</h2>
+	{{ error }}
+
+	<h2>{{ users }}</h2>
+
+	<select ng-model="repoSortOrder">
+		<option value="+name">Name</option>
+		<option value="-stargazers_count">Stars</option>
+		<option value="+language">Language</option>
+	</select>
+</div>
+
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Contributors</th>
+			<th>Stars</th>
+			<th>Languages</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="repo in repos | orderBy:repoSortOrder">
+			<td>
+				<a href="{{ repo.html_url}} ">{{ repo.name }}</a>
+			</td>
+			<td>
+			<a href=" {{ repo.contributors_url }} ">View Contributors</a>
+			</td>
+			<h2>{{ repo }}</h2>
+
+			<td>{{ repo.stargazers_count | number }}</td>
+			<td>{{ repo.language }}</td>
+		</tr>
+	</tbody>
+</table>
+
+<br>
+<a href="#/main">Back to Search</a>
+<hr>
